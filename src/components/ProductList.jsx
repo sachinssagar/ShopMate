@@ -3,17 +3,29 @@ import { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 
 export const ProductList = () => {
-  const [url, setUrl] = useState("http://localhost:8000/products");
+  const [url, setUrl] = useState(
+    "https://my-json-server.typicode.com/sachinssagar/json/products"
+  );
   const { data: products, loading, error } = useFetch(url);
 
   return (
     <section>
       <div className="button">
-        <button onClick={() => setUrl("http://localhost:8000/products")}>
+        <button
+          onClick={() =>
+            setUrl(
+              "https://my-json-server.typicode.com/sachinssagar/json/products"
+            )
+          }
+        >
           All Products
         </button>
         <button
-          onClick={() => setUrl("http://localhost:8000/products?in_stock=true")}
+          onClick={() =>
+            setUrl(
+              "https://my-json-server.typicode.com/sachinssagar/json/products?in_stock=true"
+            )
+          }
         >
           In Stock
         </button>
