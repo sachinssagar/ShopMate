@@ -4,18 +4,23 @@ import { useFetch } from "../hooks/useFetch";
 
 export const ProductList = () => {
   const [url, setUrl] = useState("http://localhost:8000/products");
-  const { data: products } = useFetch(url);
+  const { data: products, loading, error } = useFetch(url);
 
   return (
     <section>
-      <button onClick={() => setUrl("http://localhost:8000/products")}>
-        All Products
-      </button>
-      <button
-        onClick={() => setUrl("http://localhost:8000/products?in_stock=true")}
-      >
-        In Stock
-      </button>
+      <div>
+        <button onClick={() => setUrl("http://localhost:8000/products")}>
+          All Products
+        </button>
+        <button
+          onClick={() => setUrl("http://localhost:8000/products?in_stock=true")}
+        >
+          In Stock
+        </button>
+      </div>
+      <br />
+      {loading && <p>Loading...</p>}
+      {error && <p>{error}</p>}
       {products &&
         products.map((product) => (
           <div className="product" key={product.id}>
