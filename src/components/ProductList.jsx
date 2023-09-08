@@ -8,7 +8,7 @@ export const ProductList = () => {
 
   return (
     <section>
-      <div>
+      <div className="button">
         <button onClick={() => setUrl("http://localhost:8000/products")}>
           All Products
         </button>
@@ -21,19 +21,23 @@ export const ProductList = () => {
       <br />
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
-      {products &&
-        products.map((product) => (
-          <div className="product" key={product.id}>
-            <p>{product.id}</p>
-            <p>{product.name}</p>
-            <p>
-              <span>${product.price}</span>
-              <span className={product.in_stock ? "in-stock" : "out-of-stock"}>
-                {product.in_stock ? "In Stock" : "Out of Stock"}
-              </span>
-            </p>
-          </div>
-        ))}
+      <div className="product-container">
+        {products &&
+          products.map((product) => (
+            <div className="product" key={product.id}>
+              <p>{product.id}</p>
+              <p>{product.name}</p>
+              <p className="list">
+                <span>${product.price}</span>
+                <span
+                  className={product.in_stock ? "in-stock" : "out-of-stock"}
+                >
+                  {product.in_stock ? "In Stock" : "Out of Stock"}
+                </span>
+              </p>
+            </div>
+          ))}
+      </div>
     </section>
   );
 };

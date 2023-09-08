@@ -8,21 +8,57 @@
     },
     {
       "id": 2,
-      "name": "HTML5: The Missing Manual",
-      "price": 200,
+      "name": "ReactJS Mastery Course",
+      "price": 149,
       "in_stock": false
     },
     {
       "id": 3,
-      "name": "CSS: The Missing Manual",
-      "price": 300,
-      "in_stock": false
+      "name": "Node.js Advanced Techniques",
+      "price": 120,
+      "in_stock": true
     },
     {
       "id": 4,
-      "name": "JavaScript: The Definit",
-      "price": 400,
+      "name": "Python Programming for Beginners",
+      "price": 89,
+      "in_stock": false
+    },
+    {
+      "id": 5,
+      "name": "The Art of Web Design",
+      "price": 75,
       "in_stock": true
+    },
+    {
+      "id": 6,
+      "name": "Data Science Toolkit",
+      "price": 199,
+      "in_stock": false
+    },
+    {
+      "id": 7,
+      "name": "Smartphone Holder Stand",
+      "price": 15,
+      "in_stock": true
+    },
+    {
+      "id": 8,
+      "name": "Wireless Bluetooth Headphones",
+      "price": 50,
+      "in_stock": false
+    },
+    {
+      "id": 9,
+      "name": "Digital Camera Kit",
+      "price": 299,
+      "in_stock": true
+    },
+    {
+      "id": 10,
+      "name": "Portable External Hard Drive",
+      "price": 79,
+      "in_stock": false
     }
   ]
 }

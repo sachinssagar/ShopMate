@@ -1,50 +1,69 @@
 /* ProductList.css */
-section {
+
+/* Styling for the button container */
+.button {
   display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center horizontally */
-  text-align: center; /* Center text within buttons */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.product {
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  text-align: center;
-  width: 300px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.product p {
-  margin: 0;
-}
-
-.product span {
-  display: block;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.in-stock {
-  color: green;
-}
-
-.out-of-stock {
-  color: red;
-}
-/* Add styles for the buttons */
-button {
-  margin-top: 20px;
+/* Button styles */
+.button button {
   background-color: #007bff;
   color: #fff;
-  padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  margin: 8px;
   cursor: pointer;
-  margin-right: 10px;
+  transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #0056b3;
+.button button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Styling for the product container */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Styling for the product */
+.product {
+  background-color: #f5f5f5;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px;
+  width: 300px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for product details */
+.product p {
+  margin: 8px 0;
+}
+
+/* Styling for product price and stock status */
+.product .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product .list span {
+  font-size: 18px;
+}
+
+/* In-stock and out-of-stock styles */
+.product .in-stock {
+  color: #4caf50; /* Green color for in-stock products */
+}
+
+.product .out-of-stock {
+  color: #f44336; /* Red color for out-of-stock products */
 }
